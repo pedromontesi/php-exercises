@@ -1,0 +1,1 @@
+CRUD diretamente ligado ao avanti-project, do qual eu eu melhoro e vejo o que poderia ter feito diferente. Ainda em desenvolvimento.
