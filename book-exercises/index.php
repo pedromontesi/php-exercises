@@ -27,7 +27,6 @@ echo "<br>";
 // 5) Crie variáveis dinâmicas ($$variavel) a partir das chaves do array
 // Ex: $nome = "Maria", $idade = 25, $profissao = "Engenheira"
 
-// Corrigindo nomes e ponto e vírgula faltando
 $variableName = 'nome';
 $variableAge = 'idade';
 $variableWork = 'profissao';
