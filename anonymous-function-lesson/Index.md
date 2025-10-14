@@ -1,1 +1,0 @@
-Simples código de amostra,do qual é usado funções anônimas, ou também conhecido como funções lambda.
