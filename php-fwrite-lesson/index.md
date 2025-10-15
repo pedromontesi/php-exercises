@@ -1,0 +1,1 @@
+Simples código que escreve no arquivo de texto desejado, usando fwrite().
