@@ -3,8 +3,6 @@ class Product {
     private $description;
     private $stock;
     private $price;
-    private $manufacturer;
-
     private $characteristics;
 
     public function __construct($description, $stock, $price) {
