@@ -1,0 +1,1 @@
+Um simples código que percorre o Array.
