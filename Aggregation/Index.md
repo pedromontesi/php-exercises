@@ -1,1 +1,0 @@
-Exemplo de agregação, retirado do livro de Pablo Dall'Oglio.
