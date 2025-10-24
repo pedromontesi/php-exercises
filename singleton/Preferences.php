@@ -1,22 +1,35 @@
 <?php
-class Preferences {
+
+class Preferences
+{
     private $data;
     private static $instance;
-    private function __construct() {
+
+    private function __construct()
+    {
         $this->data = parse_ini_file('application.ini');
     }
-    public static function getInstance() {
+
+    public static function getInstance()
+    {
         if (empty(self::$instance)) {
-            self::$instance = new self;}
+            self::$instance = new self;
+        }
         return self::$instance;
     }
-    public function setData($key, $value) {
+
+    public function setData($key, $value)
+    {
         $this->data[$key] = $value;
     }
-    public function getData($key) {
+
+    public function getData($key)
+    {
         return $this->data[$key];
     }
-    public function save() {
+
+    public function save()
+    {
         $string = '';
         if ($this->data) {
             foreach ($this->data as $key => $value) {
