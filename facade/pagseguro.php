@@ -1,16 +1,18 @@
 <?php
-// ...
-require_once "App/Lib/PagSeguro/PagSeguroLibrary.php";
-$paymentRequest = new PagSeguroPaymentRequest();
-$paymentRequest->setCurrency("BRL");
-// item
+class PagSeguroFacade {
+private $request;
+public function __construct( $currency ) {
+$this->request = new PagSeguroPaymentRequest();
+$this->request->setCurrency( $currency );
+}
+public function addItem($product, $amount) {
 $item = new PagSeguroItem;
 $item->setId( $product->id );
-$item->setDescription( $product->description );
-$item->setQuantity( $data->amount );
+$item->setDescription( $product->description );$item->setQuantity( $amount );
 $item->setAmount( $product->price );
-$paymentRequest->addItem($item);
-// endreço
+$this->request->addItem($item);
+}
+public function setCustomer($customer) {
 $address = new PagSeguroAddress;
 $address->setPostalCode( $customer->postal );
 $address->setStreet( $customer->address );
@@ -18,13 +20,13 @@ $address->setNumber( $customer->number );
 $address->setDistrict( $customer->neighborhood );
 $address->setCity( $customer->city );
 $address->setState( $customer->state );
-$paymentRequest->setShippingAddress($address);// cliente
+$this->request->setShippingAddress($address);
 $sender = new PagSeguroSender;
 $sender->setName( trim($customer->name) );
 $sender->setEmail( trim($customer->email) );
-$paymentRequest->setSender($sender);
-$paymentRequest->setRedirectUrl("$host/confirmation.html");
-$credentials = new PagSeguroAccountCredentials($ini['account'],
-$ini['token']);
-$url = $paymentRequest->register($credentials);
-// este é apenas um código não funcional, para exemplificar o facade.
+$this->request->setSender($sender);
+}
+public function process() {
+// ...
+}
+}
