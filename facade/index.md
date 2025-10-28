@@ -2,7 +2,7 @@
 
 O padrão Facade tem como objetivo isolar as funcionalidades externas da aplicação principal, fornecendo uma interface simplificada e unificada para interagir com subsistemas complexos ou bibliotecas de terceiros.
 
-Na prática, é raro desenvolver um sistema totalmente independente — quase sempre dependemos de bibliotecas externas para tarefas específicas, como autenticação, envio de e-mails, manipulação de arquivos ou integração com APIs.
+Na prática, é raro desenvolver um sistema totalmente independente, quase sempre dependemos de bibliotecas externas para tarefas específicas, como autenticação, envio de e-mails, manipulação de arquivos ou integração com APIs.
 Porém, como essas bibliotecas estão fora do controle do desenvolvedor, mudanças em suas APIs ou atualizações podem causar impactos significativos na aplicação se não forem bem encapsuladas.
 
 🛡️ O Facade como um "Escudo" (Shield)
